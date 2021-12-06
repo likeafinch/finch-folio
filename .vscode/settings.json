@@ -1,0 +1,18 @@
+{
+	"svg.preview.background": "transparent",
+	"prettier.configPath": "package.json",
+	"eslint.packageManager": "yarn",
+	"eslint.alwaysShowStatus": true,
+	"files.autoSave": "afterDelay",
+	"editor.tabSize": 2,
+	"editor.renderWhitespace": "all",
+	"editor.wordWrap": "on",
+	"prettier.htmlWhitespaceSensitivity": "ignore",
+	"prettier.jsxSingleQuote": true,
+	"prettier.packageManager": "yarn",
+	"prettier.singleQuote": true,
+	"propTypes.arrayLike": true,
+	"editor.renderFinalNewline": false,
+	"files.autoSaveDelay": 4000,
+	"cSpell.words": ["renderprops"]
+}

@@ -1,0 +1,120 @@
+{
+	"name": "finch-folio",
+	"description": "Like A Finch Portfolio",
+	"version": "1.0.0",
+	"author": "Atticus Emery<@likeafinch>",
+	"scripts": {
+		"build": "gatsby build",
+		"develop": "gatsby develop",
+		"format": "prettier \"**/*.js\" --write",
+		"serve": "npm run build && gatsby serve",
+		"lint": "eslint --ext .js --ignore-path .gitignore ./",
+		"lint:fix": "npm run format && eslint --fix --ext .js --ignore-path .gitignore ./",
+		"commit:pre": "npm run lint:fix && git add ."
+	},
+	"dependencies": {
+		"@emotion/react": "^11.4.1",
+		"@emotion/styled": "latest",
+		"@fontsource/source-sans-pro": "^4.5.0",
+		"@loadable/component": "^5.15.0",
+		"@react-spring/parallax": "^9.2.4",
+		"dotenv": "^8.2.0",
+		"gatsby": "latest",
+		"gatsby-image": "latest",
+		"gatsby-plugin-compile-es6-packages": "latest",
+		"gatsby-plugin-emotion": "latest",
+		"gatsby-plugin-loadable-components-ssr": "^3.4.0",
+		"gatsby-plugin-manifest": "latest",
+		"gatsby-plugin-react-helmet": "latest",
+		"gatsby-plugin-robots-txt": "^1.6.10",
+		"gatsby-plugin-sharp": "latest",
+		"gatsby-plugin-sitemap": "^4.10.0",
+		"gatsby-plugin-smoothscroll": "^1.2.0",
+		"gatsby-source-filesystem": "latest",
+		"gatsby-transformer-sharp": "^3.14.0",
+		"nodemailer": "^6.4.17",
+		"prop-types": "latest",
+		"react": "latest",
+		"react-dom": "latest",
+		"react-helmet": "latest",
+		"react-spring": "^9.2.4",
+		"tailwindcss": "^2.2.9",
+		"twin.macro": "^2.7.0",
+		"typeface-cantata-one": "^1.1.13",
+		"unfetch": "^4.2.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.9.0",
+		"@loadable/babel-plugin": "^5.13.2",
+		"@loadable/webpack-plugin": "^5.15.1",
+		"babel-loader": "^8.1.0",
+		"babel-preset-gatsby": "^0.10.0",
+		"eslint-plugin-filenames": "^1.3.2",
+		"eslint-plugin-import": "^2.20.2",
+		"eslint-plugin-react": "^7.19.0",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"gatsby-plugin-perf-budgets": "^0.0.18",
+		"gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.25",
+		"pre-commit": "^1.2.2",
+		"prettier": "^2.0.4"
+	},
+	"babelMacros": {
+		"twin": {
+			"preset": "emotion"
+		}
+	},
+	"resolutions": {
+		"react-dom": "npm:@hot-loader/react-dom"
+	},
+	"pre-commit": [
+		"commit:pre"
+	],
+	"engines": {
+		"node": ">=10"
+	},
+	"keywords": [
+		"gatsby"
+	],
+	"license": "MIT",
+	"prettier": {
+		"singleQuote": true,
+		"useTabs": true,
+		"jsxSingleQuote": true,
+		"endOfLine": "lf",
+		"semi": true,
+		"jsxBracketSameLine": true,
+		"arrowParens": "always",
+		"trailingComma": "es5"
+	},
+	"eslintConfig": {
+		"globals": {
+			"tw": true
+		},
+		"extends": [
+			"react-app",
+			"eslint:recommended",
+			"plugin:react/recommended",
+			"plugin:import/errors",
+			"plugin:import/warnings",
+			"plugin:react/jsx-runtime"
+		],
+		"plugins": [
+			"react-hooks",
+			"filenames",
+			"import"
+		],
+		"rules": {
+			"react-hooks/rules-of-hooks": "error",
+			"react-hooks/exhaustive-deps": "warn",
+			"react/prop-types": "error",
+			"no-mixed-spaces-and-tabs": "off"
+		}
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/likeafinch/finch-folio"
+	},
+	"bugs": {
+		"url": "https://github.com/likeafinch/finch-folio/issues"
+	}
+}
