@@ -1,14 +1,13 @@
-/* eslint-disable filenames/match-regex */
 const LoadablePlugin = require('@loadable/webpack-plugin');
 exports.onCreateWebpackConfig = ({
-	stage,
-	getConfig,
-	rules,
-	loaders,
-	plugins,
-	actions,
+  stage,
+  getConfig,
+  rules,
+  loaders,
+  plugins,
+  actions,
 }) => {
-	actions.setWebpackConfig({
-		plugins: [new LoadablePlugin()],
-	});
+  actions.setWebpackConfig({
+    plugins: [new LoadablePlugin()],
+  });
 };

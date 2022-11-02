@@ -4,10 +4,10 @@ import { loadableReady } from '@loadable/component';
 import ReactDOM from 'react-dom';
 
 export const replaceHydrateFunction = () => {
-	return (element, container, callback) => {
-		loadableReady(() => {
-			ReactDOM.render(element, container, callback);
-		});
-	};
+  return (element, container, callback) => {
+    loadableReady(() => {
+      ReactDOM.render(element, container, callback);
+    });
+  };
 };
 export const wrapRootElement = ({ element }) => <Layout>{element}</Layout>;
