@@ -22,7 +22,12 @@ module.exports = {
       colors: {
         primary: twColors.slate[200],
         secondary: twColors.indigo[300],
-        tertiary: twColors.rose[200],
+        tertiary: twColors.sky[200],
+        rose: twColors.rose,
+        slate: twColors.slate,
+        indigo: twColors.indigo,
+        teal: twColors.teal,
+        sky: twColors.sky,
       },
       fontFamily: {
         sans: ['Source Sans Pro', 'sans-serif'],

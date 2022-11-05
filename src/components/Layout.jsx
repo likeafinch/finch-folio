@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { Fragment } from 'react';
-import { default as SEO } from './SEO';
 import { css, Global } from '@emotion/react';
 import tw, { GlobalStyles as BaseStyles } from 'twin.macro';
 import '@fontsource/source-sans-pro';
@@ -63,7 +62,6 @@ const Layout = (props) => {
   const { children } = props;
   return (
     <Fragment>
-      <SEO />
       <BaseStyles />
       <Global styles={GlobalStyle} />
       {children}

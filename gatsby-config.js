@@ -1,17 +1,26 @@
-const { manifest, ...siteMetadata } = require('./config');
+require('dotenv').config();
+const config = require('./config');
 
 module.exports = {
   /* General Information */
-  siteMetadata,
+  siteMetadata: {
+    title: config.siteTitle,
+    description: config.siteDesc,
+    author: config.siteAuthor,
+    logoUrl: config.siteLogoUrl,
+    tiles: config.tiles,
+  },
+  pathPrefix: config.pathPrefix,
   /* Plugins */
   plugins: [
-    'gatsby-plugin-perf-budgets',
-    'gatsby-plugin-webpack-bundle-analyser-v2',
-    'gatsby-plugin-loadable-components-ssr',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-compile-es6-packages',
-    'gatsby-plugin-sitemap',
-    'gatsby-plugin-robots-txt',
+    `gatsby-plugin-compile-es6-packages`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-smoothscroll`,
+    `gatsby-plugin-emotion`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -26,15 +35,17 @@ module.exports = {
         name: 'tile_backgrounds',
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        ...manifest,
+        name: config.manifestName,
+        short_name: config.manifestShortName,
+        start_url: config.pathPrefix || config.manifestStartUrl,
+        background_color: config.manifestBackgroundColor,
+        theme_color: config.manifestThemeColor,
+        display: config.manifestDisplay,
+        icon: config.manifestIcon, // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-smoothscroll',
-    'gatsby-plugin-emotion',
   ],
 };

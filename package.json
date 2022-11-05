@@ -12,28 +12,25 @@
     "format": "prettier  --ignore-path .gitignore ./ --write \"./**/*.{js,jsx,json,md}\"",
     "lint": "eslint --ext .js --ignore-path .gitignore ./",
     "lint:fix": "eslint --fix --ext .js --ignore-path .gitignore ./",
-    "commit:pre": "npm run lint:fix && npm run format && git add ."
+    "commit:pre": "npm run format && npm run lint:fix && git add ."
   },
   "dependencies": {
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
     "@fontsource/source-sans-pro": "latest",
-    "@loadable/component": "latest",
     "@react-spring/parallax": "latest",
     "dotenv": "latest",
     "gatsby": "latest",
-    "gatsby-image": "latest",
     "gatsby-plugin-compile-es6-packages": "latest",
     "gatsby-plugin-emotion": "latest",
-    "gatsby-plugin-loadable-components-ssr": "latest",
+    "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-manifest": "latest",
-    "gatsby-plugin-react-helmet": "latest",
     "gatsby-plugin-robots-txt": "latest",
-    "gatsby-plugin-sharp": "latest",
+    "gatsby-plugin-sharp": "^4.24.0",
     "gatsby-plugin-sitemap": "latest",
     "gatsby-plugin-smoothscroll": "latest",
     "gatsby-source-filesystem": "latest",
-    "gatsby-transformer-sharp": "latest",
+    "gatsby-transformer-sharp": "^4.24.0",
     "nodemailer": "latest",
     "prop-types": "latest",
     "react": "latest",
@@ -47,15 +44,11 @@
   },
   "devDependencies": {
     "@babel/core": "latest",
-    "@loadable/babel-plugin": "latest",
-    "@loadable/webpack-plugin": "latest",
     "babel-eslint": "latest",
     "babel-loader": "latest",
     "babel-preset-gatsby": "latest",
     "eslint-plugin-react": "latest",
     "eslint-plugin-react-hooks": "latest",
-    "gatsby-plugin-perf-budgets": "latest",
-    "gatsby-plugin-webpack-bundle-analyser-v2": "latest",
     "pre-commit": "latest",
     "prettier": "latest"
   },
@@ -95,9 +88,6 @@
     }
   },
   "babel": {
-    "plugins": [
-      "@loadable/babel-plugin"
-    ],
     "presets": [
       [
         "babel-preset-gatsby",
