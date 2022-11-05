@@ -11,7 +11,7 @@ export const Content = styled(ParallaxLayer)`
     z-index: 30;
   }
   &.contact-section {
-    ${tw`flex-col justify-start items-start w-full xxl:items-center`}
+    ${tw`flex-col justify-start items-start w-full 2xl:items-center`}
   }
 `;
 

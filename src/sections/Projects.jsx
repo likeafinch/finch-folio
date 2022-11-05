@@ -20,21 +20,21 @@ const TitleWrapper = styled.div`
   ${tw`text-tertiary rounded-sm overflow-hidden relative uppercase text-xl md:text-2xl xl:text-3xl p-4`};
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   &:before {
-    ${tw`absolute  -z-1 inset-0 h-full w-full`}
+    ${tw`absolute z-[-1] inset-0 h-full w-full`}
     content: ' ';
     filter: blur(1px);
   }
 `;
 
 const LinkWrapper = styled(Link)`
-  ${tw`shadow-lg mx-0 my-1 md:m-2 min-h-sm w-full  md:min-h-wrap md:w-1/2 relative no-underline rounded-lg text-white flex-col overflow-hidden flex justify-end`};
+  ${tw`shadow-lg mx-0 my-1 md:m-2 min-h-sm w-full  md:min-h-sm md:w-1/2 relative no-underline rounded-lg text-white flex-col overflow-hidden flex justify-end`};
   animation-delay: 2s;
   flex-basis: calc(50% - 1rem);
   transition: transform 1.4s;
   transition-delay: ${(props) => (props.delay + 1) * 50}ms;
   filter: grayscale(30%);
   &:before {
-    ${tw`bg-center bg-no-repeat bg-cover absolute -z-1 h-full w-full inset-0`}
+    ${tw`bg-center bg-no-repeat bg-cover absolute z-[-1] h-full w-full inset-0`}
     content: ' ';
     background-image: url(${(props) => props.bg});
     filter: opacity(0.85) grayscale(70%);

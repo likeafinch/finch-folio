@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <Fragment>
       <Content
-        tw={'flex-col justify-start items-start w-full xxl:items-center'}
+        tw={'flex-col justify-start items-start w-full 2xl:items-center'}
         factor={1}
         offset={4.7}
       >

@@ -8,12 +8,12 @@ const ContactText = tw.h2`
   relative
   text-tertiary
   border-b
-  border-main
+  border-primary
   w-max
   mb-16
   pb-2
   text-2xl
-  tracking-title
+  tracking-widest
   mr-auto
   uppercase`;
 
@@ -64,8 +64,9 @@ export const StyledForm = styled.form(({ submitted }) => [
       2xl:p-24
       relative
       w-full
-      opacity-75
-      bg-slate-700
+      bg-slate-800
+      bg-opacity-90
+      backdrop-blur
       rounded-lg
       text-tertiary
       flex-col

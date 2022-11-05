@@ -88,18 +88,6 @@
       "ecmaVersion": 8
     },
     "rules": {
-      "linebreak-style": [
-        "error",
-        "unix"
-      ],
-      "quotes": [
-        "error",
-        "single"
-      ],
-      "semi": [
-        "error",
-        "always"
-      ],
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
       "react/prop-types": "error",
@@ -114,6 +102,8 @@
       [
         "babel-preset-gatsby",
         {
+          "reactRuntime": "automatic",
+          "reactImportSource": "@emotion/react",
           "targets": {
             "browsers": [
               ">0.25%",
@@ -128,9 +118,6 @@
     "twin": {
       "preset": "emotion"
     }
-  },
-  "resolutions": {
-    "react-dom": "npm:@hot-loader/react-dom"
   },
   "pre-commit": [
     "commit:pre"

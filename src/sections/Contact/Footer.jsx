@@ -8,7 +8,7 @@ const FooterStyles = tw.footer`
   p-6
   text-sm
   lg:text-base
-  tracking-paragraph
+  tracking-wider
   uppercase
   font-thin`;
 

@@ -4,8 +4,8 @@ import tw, { css } from 'twin.macro';
 const HeroParallax = tw(ParallaxLayer)`
   mix-blend-exclusion
   px-4
-  md:px-12
-  xl:px-16
+  md:px-16
+  xl:px-32
   pt-[25%]
   w-full
   uppercase
@@ -14,7 +14,7 @@ const HeroParallax = tw(ParallaxLayer)`
   items-center
   after:(
     top-0
-    -z-1
+    z-[-1]
     bg-hero
     absolute
     h-fill
@@ -52,8 +52,8 @@ const HeroSubtitle = tw.h3`
   lg:text-2xl
   text-tertiary
   mt-6
-  xxl:w-3/4
-  tracking-paragraph
+  2xl:w-3/4
+  tracking-wider
   uppercase
   font-light
 `;
@@ -61,7 +61,7 @@ const HeroSubtitle = tw.h3`
 const HeroEmphasis = tw.em`
   text-xs
   lg:text-sm
-  tracking-paragraph
+  tracking-wider
   uppercase
   font-thin
   text-rose-200

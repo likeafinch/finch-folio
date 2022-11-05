@@ -14,7 +14,7 @@ export const FieldStyles = tw`
     bg-slate-600/10
     shadow-input
     text-tertiary
-    tracking-paragraph
+    tracking-wider
     uppercase
     border-none
     rounded-t

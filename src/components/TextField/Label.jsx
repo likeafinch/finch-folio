@@ -7,7 +7,7 @@ const LabelStyles = tw.label`
     text-tertiary
     inline-flex
     uppercase
-    tracking-paragraph
+    tracking-wider
     peer-required:(
       after:content-["\\002A"]
       after:relative

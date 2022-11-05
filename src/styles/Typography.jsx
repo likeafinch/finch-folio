@@ -1,6 +1,8 @@
-import tw, { styled } from 'twin.macro';
+import tw, { styled, css } from 'twin.macro';
+import triangle from '../images/triangle.svg';
 
-export const Title = tw.h1`
+export const Title = styled.h1(() => [
+  tw`
     text-3xl
     uppercase
     lg:text-4xl
@@ -12,28 +14,35 @@ export const Title = tw.h1`
     inline-flex
     items-center
     justify-end
-    pl-16
-    tracking-paragraph
+    pl-14
+    tracking-wider
     min-w-max
     before:(
       w-10
       h-10
       absolute
       bg-triangle-size
-      bg-triangle
-      animate-spin
-      duration-[4s]
-      left-[-5px]
+      bg-no-repeat
+      content-[' ']
+      animate-rotate
+      -left-1
       top-0
     )
-    `;
+    `,
+  css`
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    &:before {
+      background-image: url(${triangle});
+    }
+  `,
+]);
 
 export const Text = tw.div`
     opacity-90
-    text-tertiary
+    text-rose-50
     text-sm
     md:text-lg
-    tracking-paragraph
+    tracking-wider
     uppercase
     font-extralight
     `;
@@ -42,19 +51,19 @@ export const Subtitle = styled.p`
   ${tw`
     text-xl
     lg:text-2xl
-    text-tertiary
+    text-indigo-200
     mt-6
-    xxl:w-3/4
-    tracking-paragraph
+    2xl:w-3/4
+    tracking-wider
     uppercase`};
   em {
     ${tw`
       text-xs
       lg:text-sm
-      tracking-paragraph
+      tracking-wider
       uppercase
       font-thin
-      text-primary
+      text-teal-50
       mt-8
       flex
       `}
@@ -63,8 +72,8 @@ export const Subtitle = styled.p`
 
 export const LinkText = tw.div`
   opacity-90
-  text-tertiary
+  text-slate-200
   text-sm
   md:text-base
-  tracking-paragraph
+  tracking-wider
   uppercase`;

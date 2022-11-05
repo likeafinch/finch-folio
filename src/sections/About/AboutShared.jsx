@@ -48,22 +48,21 @@ export const AboutSubtitleAlt = tw(AboutSubtitle)`
     text-left
     justify-start
     w-fill
-    tracking-title
-    pt-6
-    lg:pt-0
+    tracking-widest
+    pt-4
   `;
 
 export const AboutDescription = tw.p`
-  text-slate-200/75
+  text-slate-200
   relative
   text-justify
   text-base
   md:text-lg
-  uppercase
-  font-extralight
-  tracking-wide
+  font-thin
+  tracking-tight
   pt-6
   px-8
+  whitespace-pre-line
   after:(
     absolute
     h-fill
@@ -86,9 +85,10 @@ export const AboutWrapper = tw.div`
   relative
   w-full
   rounded-lg
-  text-slate-500
+  text-slate-200
   flex-col
   items-stretch
-  bg-slate-900/90
+  bg-slate-800
+  bg-opacity-50
   backdrop-blur
   `;

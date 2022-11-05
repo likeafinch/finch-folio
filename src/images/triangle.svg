@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000" viewBox="0 0 30 35">
     <path
             fill="none"
-            stroke="#bab3d6"
-			stroke-width="2.5px"
+            stroke="rgb(165, 180, 252)"
+			stroke-width="2.65px"
             d="M14.921,2.27 28.667,25.5 1.175,25.5 z"
     />
 </svg>

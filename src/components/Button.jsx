@@ -8,7 +8,7 @@ const StyledButton = styled.button(({ secondary }) => [
     flex
     items-center
     justify-center
-    tracking-paragraph
+    tracking-wider
     transition
     duration-700
     shadow-none
@@ -28,8 +28,8 @@ const StyledButton = styled.button(({ secondary }) => [
   secondary
     ? tw`
     hover:(
-			text-slate-700
-    	bg-slate-300
+      text-slate-700
+      bg-slate-300
 		)
     bg-opacity-30
     text-slate-50

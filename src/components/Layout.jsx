@@ -36,7 +36,9 @@ const GlobalStyle = css`
       max-w-screen
       p-0
       m-0
-      bg-slate-800`}
+      bg-gradient-to-b
+      from-[#14181d]
+      to-[rgb(56, 65, 84)]`}
     height: -webkit-fill-available;
   }
   div#gatsby-focus-wrapper {

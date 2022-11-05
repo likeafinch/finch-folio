@@ -3,7 +3,7 @@ import '@fontsource/source-sans-pro';
 
 export const Inner = tw.div`
   w-full
-  xxl:w-2/3
+  2xl:w-2/3
   text-center
   flex
   flex-col
