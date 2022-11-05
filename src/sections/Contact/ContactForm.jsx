@@ -1,9 +1,8 @@
 import { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import tw, { styled } from 'twin.macro';
-import { default as Button, Actions } from './Button';
-import { MultiInputs, TextField } from './TextField';
-import { useContactForm } from '../graphql';
+import { MultiInputs, TextField, Button, Actions } from '../../components';
+import { useContactForm } from '../../graphql';
 
 const ContactText = tw.h2`
   relative

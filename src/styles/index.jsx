@@ -1,13 +1,6 @@
 import loadable from '@loadable/component';
-export {
-  hidden,
-  rotateAnimation,
-  negativeRotateAnimation,
-  loading,
-  fade,
-} from './Animations';
 export { Title, Text, Subtitle, Footer, LinkText } from './Typography';
-export { GlobalStyle, Inner } from './Global';
+export { Inner } from './Global';
 
 export const WaveDivider = loadable(() => import('./Dividers'), {
   resolveComponent: (components) => components.WaveDivider,

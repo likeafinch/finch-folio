@@ -281,13 +281,26 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      animation: {
+        fade: 'fade 2s ease-in',
+        'negative-rotate': 'negative-rotate 3s linear infinite',
+        rotate: 'rotate 3s linear infinite',
+        wave: 'wave linear 10s infinite alternate',
+      },
       backgroundColor: colors,
+      backgroundImage: {
+        triangle: "url('./src/images/triangle.svg')",
+        hero: 'linear-gradient(to top, rgba(50, 50, 65, .2) 0%, rgba(50, 50, 65, .7) 100%)',
+        about:
+          'linear-gradient( to right, rgba(30, 40, 50, 0.9) 0%, rgba(80, 100, 120, 0.7) 100% )',
+      },
       backgroundSize: {
         16: '4rem',
         '50%': '50%',
         auto: 'auto',
         contain: 'contain',
         cover: 'cover',
+        'triangle-size': '2.5rem',
       },
       borderColor: colors,
       borderRadius: {
@@ -311,6 +324,7 @@ module.exports = {
       colors,
       fontFamily: {
         sans: [
+          'Source Sans Pro',
           'Open Sans',
           '-apple-system',
           'BlinkMacSystemFont',
@@ -425,6 +439,46 @@ module.exports = {
         max: 'max-content',
         screen: '100vh',
         'section-small': '522px',
+      },
+      keyframes: {
+        wave: {
+          '0%': {
+            d: 'path("M 0 100 Q 250 50 400 200 Q 550 350 800 300 L 800 0 L 0 0 L 0 100 Z")',
+          },
+          '25%': {
+            d: 'path("M 0 175 Q 200 150 400 200 Q 600 250 800 275 L 800 0 L 0 0 L 0 100 Z")',
+          },
+          '75%': {
+            d: 'path("M 0 275 Q 150 350 400 200 Q 650 50 800 175 L 800 0 L 0 0 L 0 100 Z")',
+          },
+          '100%': {
+            d: 'path("M 0 300 Q 150 350 400 200 Q 650 50 800 100 L 800 0 L 0 0 L 0 100 Z")',
+          },
+        },
+        fade: {
+          from: {
+            opacity: 0.5,
+          },
+          to: {
+            opacity: 1,
+          },
+        },
+        rotate: {
+          from: {
+            transform: 'rotate(0deg)',
+          },
+          to: {
+            transform: 'rotate(360deg)',
+          },
+        },
+        'negative-rotate': {
+          from: {
+            transform: 'rotate(360deg)',
+          },
+          to: {
+            transform: 'rotate(0deg)',
+          },
+        },
       },
       letterSpacing: {
         paragraph: '3.2px',

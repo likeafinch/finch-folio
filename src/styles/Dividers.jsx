@@ -1,5 +1,4 @@
 import tw, { styled } from 'twin.macro';
-import { Wave, fade } from './Animations';
 import { ParallaxLayer } from '@react-spring/parallax';
 
 export const Content = styled(ParallaxLayer)`
@@ -19,7 +18,6 @@ export const Content = styled(ParallaxLayer)`
 export const Divider = styled(ParallaxLayer)`
   ${tw`absolute w-full h-full min-h-screen`};
   background: ${(props) => props.bg};
-  animation: ${fade};
   animation-iteration-count: 1;
   animation-fill-mode: none;
   top: 0;
@@ -44,14 +42,11 @@ export const WaveDivider = () => (
     factor={1.5}
     offset={5.5}
     fill={'rgba(50, 50, 65, .9)'}
-  >
-    <Wave />
-  </Divider>
+  ></Divider>
 );
 
 export const UpperDivider = styled(ParallaxLayer)`
   ${tw`absolute w-full h-full min-h-screen`};
-  animation: ${fade};
   animation-iteration-count: 1;
   animation-fill-mode: none;
   background: linear-gradient(
@@ -75,7 +70,6 @@ UpperDivider.defaultProps = {
 export const LowerDivider = styled(ParallaxLayer)`
   opacity: 0.5;
   ${tw`absolute w-full h-full min-h-screen`};
-  animation: ${fade};
   animation-iteration-count: 1;
   animation-fill-mode: none;
   background: linear-gradient(

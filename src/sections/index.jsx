@@ -1,6 +1,6 @@
 import loadable from './LoadableBase';
 
-export const About = loadable(() => import('./About'));
-export const Contact = loadable(() => import('./Contact'));
-export const Hero = loadable(() => import('./Hero'));
+export { default as Contact } from './Contact';
+export { default as About } from './About';
+export { default as Hero } from './Hero';
 export const Projects = loadable(() => import('./Projects'));

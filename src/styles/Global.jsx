@@ -1,5 +1,4 @@
 import tw, { css } from 'twin.macro';
-import { fade } from './Animations';
 import '@fontsource/source-sans-pro';
 
 export const Inner = tw.div`
@@ -36,9 +35,17 @@ export const GlobalStyle = css`
     height: -webkit-fill-available;
   }
   div#gatsby-focus-wrapper {
-    ${tw`relative flex flex-col items-center justify-center w-fill px-2 md:px-0`}
-    height: 100vh;
-    ${fade}
+    ${tw`
+      relative
+      flex
+      flex-col
+      items-center
+      justify-center
+      w-fill
+      px-2
+      md:px-0
+      h-screen
+      animate-fade`}
   }
   a {
     ${tw`text-tertiary no-underline`}

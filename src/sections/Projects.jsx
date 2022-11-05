@@ -66,7 +66,7 @@ const ProjectTiles = () => {
 const Projects = () => (
   <Fragment>
     <UpperDivider />
-    <Content className={'projects'} factor={2} offset={1}>
+    <Content className={'projects'} factor={1.75} offset={1}>
       <Inner>
         <Title>Projects</Title>
         <ProjectTiles />
