@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { css, Global } from '@emotion/react';
 import { GlobalStyles as BaseStyles } from 'twin.macro';
 import '@fontsource/source-sans-pro';
+import { Fragment } from 'react';
 
 const GlobalStyle = css`
   * {
@@ -23,11 +24,11 @@ const GlobalStyle = css`
 function Layout(props) {
   const { children } = props;
   return (
-    <>
+    <Fragment>
       <BaseStyles />
       <Global styles={GlobalStyle} />
       {children}
-    </>
+    </Fragment>
   );
 }
 

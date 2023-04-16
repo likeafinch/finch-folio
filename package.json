@@ -39,7 +39,7 @@
     "react-hook-form": "laatest",
     "react-spring": "latest",
     "tailwindcss": "latest",
-    "twin.macro": "latest",
+    "twin.macro": "^3.3.1",
     "typeface-cantata-one": "latest",
     "unfetch": "latest"
   },
