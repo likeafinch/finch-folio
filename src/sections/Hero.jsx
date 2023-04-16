@@ -72,7 +72,7 @@ const HeroEmphasis = tw.em`
 const Hero = () => (
   <HeroParallax
     offset={0}
-    speed={0.5}
+    speed={1.2}
     css={css({
       '&:after': {
         clipPath: 'polygon(0 0%,100% 0%,100% 100%,0 15%)',

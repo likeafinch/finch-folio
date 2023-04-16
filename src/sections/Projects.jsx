@@ -14,7 +14,7 @@ import {
 
 import { useProjectTiles } from '../graphql';
 
-const ProjectsWrapper = tw.div`mt-8 flex-col flex md:flex-row md:inline-flex md:flex-wrap justify-between`;
+const ProjectsWrapper = tw.div`grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-stretch`;
 
 const TitleWrapper = styled.div`
   ${tw`text-tertiary rounded-sm overflow-hidden relative uppercase text-xl md:text-2xl xl:text-3xl p-4`};
@@ -27,10 +27,10 @@ const TitleWrapper = styled.div`
 `;
 
 const LinkWrapper = styled(Link)`
-  ${tw`shadow-lg mx-0 my-1 md:m-2 min-h-sm w-full  md:min-h-sm md:w-1/2 relative no-underline rounded-lg text-white flex-col overflow-hidden flex justify-end`};
-  animation-delay: 2s;
+  ${tw`shadow-lg mx-0 my-1 md:m-2 min-h-[16rem] w-full  md:min-h-[15rem] relative no-underline rounded-lg text-white flex-col overflow-hidden flex justify-end`};
+  animation-delay: 0.2s;
   flex-basis: calc(50% - 1rem);
-  transition: transform 1.4s;
+  transition: transform 0.5s;
   transition-delay: ${(props) => (props.delay + 1) * 50}ms;
   filter: grayscale(30%);
   &:before {
@@ -66,8 +66,8 @@ const ProjectTiles = () => {
 const Projects = () => (
   <Fragment>
     <UpperDivider />
-    <Content className={'projects'} factor={1.75} offset={1}>
-      <Inner>
+    <Content className={'projects'} speed={0.25} offset={1}>
+      <Inner className={'projects'}>
         <Title>Projects</Title>
         <ProjectTiles />
       </Inner>

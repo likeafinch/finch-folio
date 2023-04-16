@@ -14,8 +14,8 @@ import { css } from '@emotion/react';
 
 const About = () => (
   <Fragment>
-    <AboutDivider speed={-0.2} offset={3} />
-    <Content className={'about'} speed={-0.1} factor={1.5} offset={3}>
+    <AboutDivider />
+    <Content className={'about'} speed={0.8} offset={2}>
       <Inner>
         <Title>About</Title>
         <AboutWrapper

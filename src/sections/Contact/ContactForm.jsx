@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import tw, { styled } from 'twin.macro';
+import tw, { styled, css } from 'twin.macro';
 import { MultiInputs, TextField, Button, Actions } from '../../components';
 import { useContactForm } from '../../graphql';
 
@@ -66,7 +66,6 @@ export const StyledForm = styled.form(({ submitted }) => [
       w-full
       bg-slate-800
       bg-opacity-90
-      backdrop-blur
       rounded-lg
       text-tertiary
       flex-col
@@ -74,6 +73,9 @@ export const StyledForm = styled.form(({ submitted }) => [
       transition-all
       duration-700
     `,
+  css`
+    backdrop-filter: blur(50px);
+  `,
   submitted &&
     tw`
     py-12

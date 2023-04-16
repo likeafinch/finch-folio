@@ -20,9 +20,9 @@ module.exports = {
         title: '0px -2px 0px 0px rgba(71, 85, 105, .7) inset',
       },
       colors: {
-        primary: twColors.slate[200],
-        secondary: twColors.indigo[300],
-        tertiary: twColors.sky[200],
+        primary: twColors.slate[100],
+        secondary: twColors.indigo[200],
+        tertiary: twColors.sky[100],
         rose: twColors.rose,
         slate: twColors.slate,
         indigo: twColors.indigo,

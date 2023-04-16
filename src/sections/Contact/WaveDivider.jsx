@@ -27,7 +27,7 @@ const WaveSVG = tw.svg`
 const WavePath = tw.path`animate-wave`;
 
 const WaveDivider = () => (
-  <WaveParallaxLayer factor={1.5} offset={4.5}>
+  <WaveParallaxLayer offset={3.5}>
     <WaveWrapper>
       <InnerWave>
         <WaveSVG

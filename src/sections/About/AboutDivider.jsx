@@ -15,8 +15,8 @@ const AboutDividerStyles = tw(ParallaxLayer)`
 const AboutDivider = () => (
   <AboutDividerStyles
     css={css({ clipPath: 'polygon(-40% 27%, -18% 100%, 131% 85%, 73% 0%)' })}
-    speed={-0.2}
-    offset={3}
+    speed={0.7}
+    offset={2.5}
   />
 );
 

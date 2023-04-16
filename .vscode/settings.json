@@ -12,7 +12,7 @@
   "prettier.packageManager": "yarn",
   "prettier.singleQuote": true,
   "propTypes.arrayLike": true,
-  "editor.renderFinalNewline": false,
+  "editor.renderFinalNewline": "off",
   "files.autoSaveDelay": 4000,
   "cSpell.words": ["renderprops"]
 }

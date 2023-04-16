@@ -3,7 +3,7 @@ import { Hero, Projects, About, Contact } from '../sections';
 
 const IndexPage = () => {
   return (
-    <Parallax pages={6}>
+    <Parallax pages={4.5}>
       <Hero />
       <Projects />
       <About />

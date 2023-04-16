@@ -15,6 +15,10 @@ export const Content = styled(ParallaxLayer)`
   }
 `;
 
+export const FooterContent = styled(Content)`
+  ${tw`z-[-1]`}
+`;
+
 export const Divider = styled(ParallaxLayer)`
   ${tw`absolute w-full h-full min-h-screen`};
   background: ${(props) => props.bg};
@@ -40,7 +44,7 @@ export const WaveDivider = () => (
   <Divider
     className={'wave'}
     factor={1.5}
-    offset={5.5}
+    offset={3.5}
     fill={'rgba(50, 50, 65, .9)'}
   ></Divider>
 );
@@ -87,5 +91,5 @@ export const LowerDivider = styled(ParallaxLayer)`
 LowerDivider.defaultProps = {
   factor: 1.5,
   speed: -0.5,
-  offset: 4.2,
+  offset: 3.2,
 };

@@ -26,8 +26,6 @@ export const FieldStyles = tw`
         shadow-input-focused
         bg-slate-500/10
         )
-    invalid:shadow-input-error
-    invalid:focus:shadow-input-focused
     disabled:shadow-input-disabled
     disabled:text-slate-500
     placeholder:text-opacity-50

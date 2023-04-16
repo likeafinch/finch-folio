@@ -1,4 +1,4 @@
-import { Content, Inner, Title } from '../../styles';
+import { Content, FooterContent, Inner, Title } from '../../styles';
 import { Fragment } from 'react';
 import { default as WaveDivider } from './WaveDivider';
 import { default as ContactForm } from './ContactForm';
@@ -10,16 +10,16 @@ const Contact = () => {
       <Content
         tw={'flex-col justify-start items-start w-full 2xl:items-center'}
         factor={1}
-        offset={4.7}
+        offset={3.25}
       >
         <Inner>
           <Title>Get In Touch</Title>
           <ContactForm />
         </Inner>
       </Content>
-      <Content tw={'z-[30]'} offset={5}>
+      <FooterContent offset={3.5}>
         <Footer />
-      </Content>
+      </FooterContent>
       <WaveDivider />
     </Fragment>
   );

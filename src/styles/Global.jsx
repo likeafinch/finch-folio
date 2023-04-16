@@ -7,7 +7,7 @@ export const Inner = tw.div`
   text-center
   flex
   flex-col
-  items-start
+  items-center
   justify-around
   lg:text-left`;
 

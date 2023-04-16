@@ -29,7 +29,7 @@ export const TextFieldStyles = styled.div(({ fieldWidth, fieldMarginLeft }) => [
     `,
   fieldMarginLeft &&
     css`
-      @media (min-width: 600px) {
+      @media (min-width: 772px) {
         margin-left: ${fieldMarginLeft};
       }
     `,
