@@ -1,12 +1,24 @@
+import { Parallax } from '@react-spring/parallax';
 import Layout from '../components/Layout';
-import ProjectTiles from '../components/ProjectTiles';
+import { DividerShape, Wave } from '../components/DividerShapes';
+import tw from 'twin.macro';
 
-const IndexPage = () => {
+export default function IndexPage() {
   return (
     <Layout>
-      <ProjectTiles />
+      <Parallax pages={4}>
+        <DividerShape offset={0} speed={1} />
+        <Wave offset={3} speed={-0} />
+        <DividerShape offset={0.75} speed={0.3} shape={'rhombus'} />
+        <DividerShape offset={2.6} speed={0.1} shape={'triangle'} />
+        <DividerShape
+          css={tw`[filter:hue-rotate(230deg)]`}
+          offset={1.3}
+          speed={-0.3}
+          shape={'triangle'}
+        />
+        <DividerShape offset={2} speed={-0.4} shape={'ellipse'} />
+      </Parallax>
     </Layout>
   );
-};
-
-export default IndexPage;
+}

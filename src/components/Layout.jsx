@@ -27,7 +27,10 @@ function Layout(props) {
     <Fragment>
       <BaseStyles />
       <Global styles={GlobalStyle} />
-      {children}
+      <div tw="h-full w-full absolute bg-gradient-to-b from-blue-400/10 to-indigo-400/30 bg-black">
+        {' '}
+        {children}
+      </div>
     </Fragment>
   );
 }
