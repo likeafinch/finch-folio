@@ -1,10 +1,11 @@
 import tw, { styled, css } from 'twin.macro';
 import { Link, graphql, useStaticQuery } from 'gatsby';
+import { animated, useSprings } from 'react-spring';
 
-const ProjectTile = styled(Link)(() => [
+const ProjectTile = styled(animated(Link))(() => [
   tw`
   min-h-[16rem]
-  md:min-h-[15rem]
+  md:min-h-[20rem]
   no-underline
   rounded
   shadow-lg
@@ -14,7 +15,6 @@ const ProjectTile = styled(Link)(() => [
   justify-end
   overflow-hidden
   transition-transform
-  delay-200
   duration-500
   [filter:grayscale(30%)]
   before:(
@@ -79,7 +79,15 @@ export default function ProjectTiles() {
       }
     }
   `);
-  const Tiles = tiles.map(({ title, subtitle, pathname }) => {
+  const trails = useSprings(tiles.length + 1, {
+    from: {
+      y: '10%',
+    },
+    to: {
+      y: '0%',
+    },
+  });
+  const Tiles = tiles.map(({ title, subtitle, pathname }, index) => {
     const {
       id,
       fluid: { src },
@@ -87,7 +95,12 @@ export default function ProjectTiles() {
       (background) => background?.fluid?.originalName.split('_')[0] === pathname
     );
     return (
-      <ProjectTile backgroundImage={src} to={'/'} key={id}>
+      <ProjectTile
+        style={trails[index]}
+        backgroundImage={src}
+        to={'/'}
+        key={id}
+      >
         <div tw="text-tertiary rounded-sm overflow-hidden relative uppercase text-xl md:text-2xl xl:text-3xl p-4 before:(absolute z-[-1] inset-0 h-full w-full blur-sm [content:' '])">
           {title}
           <div tw="opacity-90 text-primary text-sm md:text-base tracking-wider uppercase">
@@ -97,8 +110,9 @@ export default function ProjectTiles() {
       </ProjectTile>
     );
   });
+
   return (
-    <section tw="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-stretch">
+    <section tw="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-stretch p-6">
       {Tiles}
     </section>
   );

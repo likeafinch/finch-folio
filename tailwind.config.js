@@ -119,6 +119,7 @@ module.exports = {
         'negative-rotate': 'negative-rotate 3s linear infinite',
         rotate: 'rotate 6s linear infinite',
         wave: 'wave linear 10s infinite alternate',
+        'slide-in': 'slide-in 2s ease-in',
       },
       keyframes: {
         wave: {
@@ -157,6 +158,15 @@ module.exports = {
           },
           to: {
             transform: 'rotate(0deg)',
+          },
+        },
+        'slide-in': {
+          from: {
+            opacity: 0.5,
+            transform: 'translateY(-20px)',
+          },
+          to: {
+            opacity: 1,
           },
         },
       },

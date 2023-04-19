@@ -1,7 +1,8 @@
-import { Parallax } from '@react-spring/parallax';
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import Layout from '../components/Layout';
 import { DividerShape, Wave } from '../components/DividerShapes';
 import tw from 'twin.macro';
+import ProjectTiles from '../components/ProjectTiles';
 
 export default function IndexPage() {
   return (
@@ -18,6 +19,9 @@ export default function IndexPage() {
           shape={'triangle'}
         />
         <DividerShape offset={2} speed={-0.4} shape={'ellipse'} />
+        <ParallaxLayer offset={1} factor={1.25} speed={0.8}>
+          <ProjectTiles />
+        </ParallaxLayer>
       </Parallax>
     </Layout>
   );
