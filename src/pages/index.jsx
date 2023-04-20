@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import { DividerShape, Wave } from '../components/DividerShapes';
 import tw from 'twin.macro';
 import ProjectTiles from '../components/ProjectTiles';
+import ContactForm from '../components/ContactForm';
 
 export default function IndexPage() {
   return (
@@ -21,6 +22,13 @@ export default function IndexPage() {
         <DividerShape offset={2} speed={-0.4} shape={'ellipse'} />
         <ParallaxLayer offset={1} factor={1.25} speed={0.8}>
           <ProjectTiles />
+        </ParallaxLayer>
+        <ParallaxLayer
+          css={tw`flex flex-col items-center`}
+          offset={3}
+          speed={0}
+        >
+          <ContactForm />
         </ParallaxLayer>
       </Parallax>
     </Layout>

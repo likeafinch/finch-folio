@@ -23,14 +23,14 @@
     "gatsby": "latest",
     "gatsby-plugin-compile-es6-packages": "latest",
     "gatsby-plugin-emotion": "latest",
-    "gatsby-plugin-image": "^2.24.0",
+    "gatsby-plugin-image": "latest",
     "gatsby-plugin-manifest": "latest",
     "gatsby-plugin-robots-txt": "latest",
-    "gatsby-plugin-sharp": "^4.24.0",
+    "gatsby-plugin-sharp": "latest",
     "gatsby-plugin-sitemap": "latest",
     "gatsby-plugin-smoothscroll": "latest",
     "gatsby-source-filesystem": "latest",
-    "gatsby-transformer-sharp": "^4.24.0",
+    "gatsby-transformer-sharp": "latest",
     "nodemailer": "latest",
     "prop-types": "latest",
     "react": "latest",
@@ -39,18 +39,19 @@
     "react-hook-form": "laatest",
     "react-spring": "latest",
     "tailwindcss": "latest",
-    "twin.macro": "^3.3.1",
+    "twin.macro": "latest",
     "typeface-cantata-one": "latest",
     "unfetch": "latest"
   },
   "devDependencies": {
     "@babel/core": "latest",
-    "babel-eslint": "latest",
+    "@babel/eslint-parser": "latest",
+    "@tailwindcss/forms": "^0.5.3",
     "babel-loader": "latest",
     "babel-preset-gatsby": "latest",
     "eslint-plugin-react": "latest",
     "eslint-plugin-react-hooks": "latest",
-    "postcss": "^8.4.22",
+    "postcss": "latest",
     "pre-commit": "latest",
     "prettier": "latest"
   },
@@ -94,8 +95,6 @@
       [
         "babel-preset-gatsby",
         {
-          "reactRuntime": "automatic",
-          "reactImportSource": "@emotion/react",
           "targets": {
             "browsers": [
               ">0.25%",
